@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maksym Ilnytskyi CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(120deg, #1e3c72, #2a5298, #162447);
+            background-size: 600% 600%;
+            color: #fff;
+            overflow-x: hidden;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+            animation: gradientShift 15s infinite;
+        }
+
+        header {
+            grid-column: span 12;
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(52, 73, 94, 0.85);
+            animation: slideDown 2s ease-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(26, 188, 156, 0.8);
+        }
+
+        header p {
+            font-size: 1.5rem;
+            margin: 10px 0 0;
+            font-weight: 300;
+        }
+
+        .section {
+            background: rgba(44, 62, 80, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+            backdrop-filter: blur(5px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(26, 188, 156, 0.2), transparent);
+            animation: pulse 6s infinite;
+            transform: rotate(45deg);
+        }
+
+        .contact {
+            grid-column: span 6;
+            animation: floatInLeft 1.5s ease-in-out;
+        }
+
+        .skills {
+            grid-column: span 6;
+            animation: floatInRight 1.5s ease-in-out;
+        }
+
+        .languages {
+            grid-column: span 4;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .experience {
+            grid-column: span 8;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .consent {
+            grid-column: span 12;
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        .section h2 {
+            margin: 0 0 20px;
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            color: #1abc9c;
+        }
+
+        a {
+            color: #1abc9c;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #16a085;
+        }
+
+        .experience-item {
+            background: rgba(52, 73, 94, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            animation: popIn 1.2s ease-out;
+        }
+
+        .experience-item h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #1abc9c;
+            text-shadow: 0 0 5px rgba(26, 188, 156, 0.5);
+        }
+
+        .experience-item p {
+            margin: 10px 0 0;
+            line-height: 1.6;
+        }
+
+        footer {
+            grid-column: span 12;
+            text-align: center;
+            padding: 20px;
+            background: rgba(52, 73, 94, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes floatInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes floatInRight {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Maksym Ilnytskyi</h1>
+        <p>Software Developer | Project Manager</p>
+    </header>
+
+    <div class="section contact">
+        <h2>Contact</h2>
+        <p>📞 +48 793 185 583</p>
+        <p>📧 maksym.ilnytskyi@icloud.com</p>
+        <p>🔗 <a href="https://www.linkedin.com/in/maksym-ilnytskyi" target="_blank">LinkedIn Profile</a></p>
+    </div>
+
+    <div class="section skills">
+        <h2>Skills</h2>
+        <p>C#, .NET, WPF</p>
+        <p>Kotlin, Android</p>
+        <p>Unity</p>
+        <p>SQL(SQLite, PostgreSQL, MySQL), NoSQL(FireBase, Apache CouchDB)</p>
+        <p>Jira, Asana, Trello, Slack </p>
+        <p>GIT
+        <p>Github, Gitlab, Bitbucket</p>
+        <p>PM², Scrum, Agile, PRINCE2</p>
+        <p>Office365
+        <p>Angular, HTML, CSS</p>
+    </div>
+
+    <div class="section languages">
+        <h2>Languages</h2>
+        <p>Polish</p>
+        <p>English</p>
+        <p>Ukrainian</p>
+        <p>Russian</p>
+    </div>
+
+    <div class="section experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <h3>QSOFT (2022 - 2023)</h3>
+            <p>Developed Unity applications, focusing on creating optimized gameplay with Sprite, Prefabs, and scene configuration. Conducted thorough product testing to ensure quality standards and identified opportunities for improvement. Utilized Git for efficient version control and seamless team collaboration. Wrote efficient and scalable C# code for high-performance gaming applications.</p>        </div>
+        <div class="experience-item">
+            <h3>Grupa ABS (2023 - Present)</h3>
+            <p>Managed a team of 4 developers, coordinating project milestones and ensuring timely delivery. Designed and deployed Windows applications using WPF, overseeing the entire development cycle from concept to deployment. Integrated third-party libraries, customized device functionalities, and maintained robust database systems. Conducted comprehensive software testing, identifying and resolving critical issues to maintain high reliability and performance standards.</p>        </div>
+    </div>
+
+    <div class="section consent">
+        <h2>Consent</h2>
+        <p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja
+            2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE)
+            2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego
+            przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).</p>
+            </div>
+    <footer>
+        <p>© 2024 Maksym Ilnytskyi. All rights reserved.</p>
+    </footer>
+</body>
+</html>
