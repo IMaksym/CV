@@ -16,7 +16,7 @@
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             grid-gap: 20px;
-            padding: 20px;
+            padding: 0;
             animation: gradientShift 15s infinite;
         }
 
@@ -66,29 +66,9 @@
             transform: rotate(45deg);
         }
 
-        .contact {
-            grid-column: span 6;
-            animation: floatInLeft 1.5s ease-in-out;
-        }
-
-        .skills {
-            grid-column: span 6;
-            animation: floatInRight 1.5s ease-in-out;
-        }
-
-        .languages {
-            grid-column: span 4;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        .experience {
-            grid-column: span 8;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        .consent {
+        .contact, .skills, .languages, .experience, .consent {
             grid-column: span 12;
-            animation: slideUp 1.5s ease-in-out;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .section h2 {
@@ -162,47 +142,14 @@
             }
         }
 
-        @keyframes floatInLeft {
-            from {
-                transform: translateX(-100%);
+        @keyframes pulse {
+            0% {
+                transform: scale(0);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(0);
                 opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes floatInRight {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes popIn {
-            from {
-                transform: scale(0.9);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
             }
         }
 
@@ -218,25 +165,22 @@
             }
         }
 
-        @keyframes pulse {
-            0% {
-                transform: scale(0);
-                opacity: 0.5;
-            }
-            100% {
-                transform: scale(0);
+        @keyframes popIn {
+            from {
+                transform: scale(0.9);
                 opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
             }
         }
 
+        /* Mobile-first adjustments */
         @media (max-width: 768px) {
             body {
-                grid-template-columns: repeat(1, 1fr);
+                grid-template-columns: 1fr;
                 padding: 10px;
-            }
-
-            .contact, .skills, .languages, .experience, .consent {
-                grid-column: span 1;
             }
 
             header h1 {
@@ -249,6 +193,10 @@
 
             .section {
                 padding: 20px;
+            }
+
+            .experience-item h3 {
+                font-size: 1.3rem;
             }
         }
 
@@ -295,10 +243,10 @@
         <p>Unity</p>
         <p>SQL(SQLite, PostgreSQL, MySQL), NoSQL(FireBase, Apache CouchDB)</p>
         <p>Jira, Asana, Trello, Slack </p>
-        <p>GIT
+        <p>GIT</p>
         <p>Github, Gitlab, Bitbucket</p>
         <p>PM², Scrum, Agile, PRINCE2</p>
-        <p>Office365
+        <p>Office365</p>
         <p>Angular, HTML, CSS</p>
     </div>
 
@@ -314,19 +262,19 @@
         <h2>Experience</h2>
         <div class="experience-item">
             <h3>QSOFT (2022 - 2023)</h3>
-            <p>Developed Unity applications, focusing on creating optimized gameplay with Sprite, Prefabs, and scene configuration. Conducted thorough product testing to ensure quality standards and identified opportunities for improvement. Utilized Git for efficient version control and seamless team collaboration. Wrote efficient and scalable C# code for high-performance gaming applications.</p>        </div>
+            <p>Developed Unity applications, focusing on creating optimized gameplay with Sprite, Prefabs, and scene configuration. Conducted thorough product testing to ensure quality standards and identified opportunities for improvement. Utilized Git for efficient version control and seamless team collaboration. Wrote efficient and scalable C# code for high-performance gaming applications.</p>
+        </div>
         <div class="experience-item">
             <h3>Grupa ABS (2023 - Present)</h3>
-            <p>Managed a team of 4 developers, coordinating project milestones and ensuring timely delivery. Designed and deployed Windows applications using WPF, overseeing the entire development cycle from concept to deployment. Integrated third-party libraries, customized device functionalities, and maintained robust database systems. Conducted comprehensive software testing, identifying and resolving critical issues to maintain high reliability and performance standards.</p>        </div>
+            <p>Managed a team of 4 developers, coordinating project milestones and ensuring timely delivery. Designed and deployed Windows applications using WPF, overseeing the entire development cycle from concept to deployment. Integrated third-party libraries, customized device functionalities, and maintained robust database systems. Conducted comprehensive software testing, identifying and resolving critical issues to maintain high reliability and performance standards.</p>
+        </div>
     </div>
 
     <div class="section consent">
         <h2>Consent</h2>
-        <p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja
-            2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE)
-            2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego
-            przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).</p>
-            </div>
+        <p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji...</p>
+    </div>
+
     <footer>
         <p>© 2024 Maksym Ilnytskyi. All rights reserved.</p>
     </footer>
